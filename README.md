@@ -18,22 +18,6 @@ Funcionalidades implementadas
   - Mostrar/ocultar contenido
   - Efectos visuales básicos
   - Validación simple de formularios
-
-Estructura del proyecto
-
-concesionario-web/
-├── audi/
-│ └── imagenes de Audi
-├── mercedes/
-│ └── imagenes de Mercedes
-├── nissan/
-│ └── imagenes de Nissan
-├── supra/
-│ └── imagenes de Supra
-├── concesionario.html
-├── estilo.css
-└── script.js (si corresponde)
-
 Objetivo
 
 El objetivo de este proyecto fue consolidar habilidades fundamentales en el desarrollo web, incluyendo:
