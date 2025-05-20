@@ -1,0 +1,280 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="stylesheet" href="estilo.css">
+    <script>
+        function mostrarOtrasImagenes1(image) {
+            ocultarImagenesAnteriores();
+          var fullImage = document.getElementById('fullImage1');
+          fullImage.style.display = 'flex';
+          fullImage.classList.add('posicion-imagenes1');
+        }
+        function mostrarOtrasImagenes2(image) {
+            ocultarImagenesAnteriores();
+          var fullImage = document.getElementById('fullImage2');
+          fullImage.style.display = 'flex';
+          fullImage.classList.add('posicion-imagenes2');
+        }
+        function mostrarOtrasImagenes3(image) {
+            ocultarImagenesAnteriores();
+          var fullImage = document.getElementById('fullImage3');
+          fullImage.style.display = 'flex';
+          fullImage.classList.add('posicion-imagenes3');
+        }
+        function mostrarOtrasImagenes4(image) {
+            ocultarImagenesAnteriores();
+          var fullImage = document.getElementById('fullImage4');
+          fullImage.style.display = 'flex';
+          fullImage.classList.add('posicion-imagenes4');
+        }
+        function ocultarImagenesAnteriores() {
+        var fullImage1 = document.getElementById('fullImage1');
+        var fullImage2 = document.getElementById('fullImage2');
+        var fullImage3 = document.getElementById('fullImage3');
+
+        fullImage1.style.display = 'none';
+        fullImage2.style.display = 'none';
+        fullImage3.style.display = 'none';
+    }
+
+        function toggleImagenes(id) {
+            var fullImage = document.getElementById(id);
+            if (fullImage.style.display === 'flex') {
+                fullImage.style.display = 'none';
+            } else {
+                fullImage.style.display = 'flex';
+            }
+        }
+        function validarFormulario() {
+      var nombre = document.getElementById('nombre').value;
+      var mail = document.getElementById('mail').value;
+      var telefono = document.getElementById('telefono').value;
+      var pais = document.getElementById('pais').value;
+      var Comentario = document.getElementById('Comentario').value;
+
+      if (nombre =='' && pais == ''&& mail =='' && telefono == '' && Comentario == '') {
+        alert('Los campos son obligatorios.');
+      } else if (nombre == '') {
+        alert('El campo Nombre es obligatorio.');
+      } else if (pais == '') {
+        alert('El campo País es obligatorio.');
+      } else if (mail == '') {
+        alert('El campo mail es obligatorio.');
+      } else if (telefono == '') {
+        alert('El campo telefono es obligatorio.');
+      } else if (Comentario == '') {
+        alert('El campo comentario es obligatorio.');
+      } else {
+        alert('Datos enviados');
+      }
+    }
+      </script>
+</head>
+<body>
+    <div class="titulo">
+        <h1><a name="inicio">Concesionario XYZ</a></h1>
+    </div>
+
+    <h2>Bienvenidos a la pagina oficial del concesionario XYZ</h2>
+    <h2>Ac&aacute; prodr&aacute;n encontrar una gran variedad de vehiculos y los mejores precios</h2>
+    <br>
+
+    <div class="contenido">
+        
+     <ul class="ancla">
+        <li><a href="#inicio">Inicio</a></li>
+        <li><a href="#modelos">Modelos</a></li>
+        <li><a href="#informacion">Acerca de XYZ</a></li>
+        <li><a href="#contacto">Contacto</a></li>
+     </ul>
+    </div>
+    <br>
+
+    <h1><a name="modelos">Modelos</a></h1>
+    <div class="gallery">
+        <div class="gallery">
+            <div class="imagen1">
+                <img src="mercedes/mercedes1.webp" onclick="mostrarOtrasImagenes1()" />
+            </div>
+            <div class="imagen2">
+                <img src="nissan/nissan 1.jpg" onclick="mostrarOtrasImagenes2()" />
+            </div>
+            <div class="imagen3">
+                <img src="supra/supra1.jpg" onclick="mostrarOtrasImagenes3()" />
+            </div>
+            <div class="imagen4">
+                <img src="audi/audi1.webp" onclick="mostrarOtrasImagenes4()" />
+            </div>
+      </div>
+    
+      <div class="full-image" id="fullImage1" style="display: none;">
+        <img src="mercedes/mercedes2.jpg" onclick="toggleImagenes('fullImage1')" />
+        <img src="mercedes/mercedes3.jpg" onclick="toggleImagenes('fullImage1')" />
+        <img src="mercedes/mercedes4.jpg" onclick="toggleImagenes('fullImage1')" />
+        <img src="mercedes/mercedes5.jpg" onclick="toggleImagenes('fullImage1')" />
+    </div>
+    <div class="full-image" id="fullImage2" style="display: none;">
+        <img src="nissan/nissan 2.jpg" onclick="toggleImagenes('fullImage2')" />
+        <img src="nissan/nissan 3.jpg" onclick="toggleImagenes('fullImage2')" />
+        <img src="nissan/nissan 4.jpg" onclick="toggleImagenes('fullImage2')" />
+        <img src="nissan/nissan 5.jpg" onclick="toggleImagenes('fullImage2')" />
+    </div>
+    <div class="full-image" id="fullImage3" style="display: none;">
+        <img src="supra/supra2.jpg" onclick="toggleImagenes('fullImage3')" />
+        <img src="supra/supra3.jpg" onclick="toggleImagenes('fullImage3')" />
+        <img src="supra/supra4.jpg" onclick="toggleImagenes('fullImage3')" />
+        <img src="supra/supra5.jpg" onclick="toggleImagenes('fullImage3')" />
+    </div>
+    <div class="full-image" id="fullImage4" style="display: none;">
+        <img src="audi/audi2.webp" onclick="toggleImagenes('fullImage4')" />
+        <img src="audi/audi3.webp" onclick="toggleImagenes('fullImage4')" />
+        <img src="audi/audi4.webp" onclick="toggleImagenes('fullImage4')" />
+        <img src="audi/audi5.webp" onclick="toggleImagenes('fullImage4')" />
+    </div>
+    
+    <div class="fondo1">
+        <h1>Mercedes venz-GMR GT</h1>
+        <p> Diseño: Ofrece un diseño elegante y aerodinámico. Cuenta con un capó largo,<br>
+            una cabina retrasada y una cola corta, lo que le confiere una apariencia deportiva.<br>
+
+            Motor: Viene equipado con una gama de potentes motores V8,<br>
+            
+            Rendimiento: El AMG GT destaca por su impresionante rendimiento en carretera. Ofrece una aceleración rápida, <br>
+            una excelente manipulación y una experiencia de conducción ágil,<br>
+            
+            Tecnología: Incorpora características tecnológicas avanzadas, como sistemas de infoentretenimiento de vanguardia, <br>
+            pantallas digitales, sistemas de asistencia al conductor y opciones de personalización.<br>
+            
+            Interior: El interior del AMG GT está diseñado con materiales de alta calidad y con un enfoque en la comodidad y <br>
+            la elegancia. Ofrece asientos deportivos con soporte lateral y detalles de lujo.<br>
+            
+            El Mercedes-AMG GT es un automóvil prestigioso que combina lujo y altas prestaciones<br>
+            
+        </p>
+        <h2>Precio: 324.000 USD</h2>
+    </div>
+    <div class="fondo2">
+        <h1>Nissan GTR</h1>
+        <p> Diseño: Tiene un diseño distintivo y aerodinámico. Se caracteriza por su carrocería ancha, <br>
+            un estilo frontal único y un alerón trasero que ayuda en la estabilidad a altas velocidades.<br>
+
+            Motor: El GT-R está equipado con un motor V6 twin-turbo de alta potencia, <br>
+            Rendimiento: Es famoso por su tracción en las cuatro ruedas (AWD)<br>
+             y su sistema de control dinámico que le permite tener un manejo excepcional,<br>
+            incluso en condiciones de alta velocidad y curvas cerradas. Además, cuenta con tecnología avanzada que mejora <br>
+
+            su desempeño en pista y carretera.<br>
+            
+            Tecnología: El Nissan GT-R incluye una amplia gama de características tecnológicas avanzadas, 
+            <br>
+            desde sistemas de infoentretenimiento hasta asistencia al conductor, <br>
+            como cámaras de visión periférica y controles de tracción ajustables.<br>
+            
+        <h2>Precio: 141.990 USD</h2>
+    </div>
+    <div class="fondo3">
+        <h1>Toyota GR Supra </h1>
+        <p> Diseño: El Supra tiene un diseño deportivo y aerodinámico. Su diseño está influenciado <br>
+            por modelos clásicos de Supra, pero con un toque moderno y elegante.<br>
+
+            Motor: Equipado con un motor de seis cilindros en línea y turboalimentado, que genera alrededor<br>
+            de 258 caballos de fuerza. Este motor ofrece un rendimiento ágil y una buena aceleración.<br>
+            
+            Rendimiento: El Supra se destaca por su excelente rendimiento en carretera, con una buena maniobrabilidad,<br>
+            capacidad de respuesta y una conducción emocionante. Su equilibrio entre <br>
+            potencia y manejo lo hace una opción atractiva para los entusiastas de los deportivos.<br>
+            
+            Tecnología: Incluye características tecnológicas modernas, como un sistema de infoentretenimiento, <br>
+            asistencia al conductor y conectividad avanzada, 
+
+        <h2>Precio: 1,428,900 USD</h2>
+    </div>
+    <div class="fondo4">
+        <h1>Audi E-Tron GT </h1>
+        <p> Diseño: El e-tron GT tiene un diseño elegante y deportivo que refleja la identidad <br>
+            de la marca Audi. lo que lo convierte en un sedán deportivo llamativo.<br>
+
+            Rendimiento: Equipado con un sistema de propulsión eléctrica que ofrece un alto rendimiento. <br>
+            En su versión más potente, el RS e-tron GT, se puede alcanzar una potencia <br>
+            combinada de más de 600 caballos de fuerza, lo que le permite acelerar rápidamente y ofrecer<br>
+             un rendimiento dinámico en la carretera.<br>
+            
+            Batería y autonomía: Ofrece una batería de gran capacidad que proporciona una autonomía considerable<br>
+             con una sola carga. La autonomía puede variar según el modelo y las condiciones de conducción <br>
+              pero se espera que proporcione un rango adecuado para su uso diario.<br>
+            
+            Tecnología: Incorpora las últimas tecnologías de Audi, como un sistema de infoentretenimiento avanzado,<br>
+             asistencia al conductor y características de conectividad. Además, puede estar equipado<br>
+              con tecnologías de carga rápida. <br>
+            
+        <h2>Precio: 274.000 USD</h2>
+    </div>
+    <br>
+    <div class="info">
+    <h1><a name="informacion">Acerca de XYZ</a></h1>
+    <p>En el Concesionario XYZ, cada auto cuenta una historia. Fundado por David, un apasionado amante de los
+        <br> 
+        autom&oacute;viles, este lugar se convirti&oacute; en un santuario para entusiastas. Ofreciendo una amplia gama de 
+        <br>
+        veh&iacute;culos y un servicio excepcional, el concesionario se destac&oacute;. Adem&aacute;s, El Concesionario XYZ era 
+        <br>
+        conocido por su compromiso con la caridad y la comunidad. Aqu&iacute;, los sueños de tener el auto perfecto 
+        <br>
+        se hac&iacute;an realidad, y cada cliente se convert&iacute;a en parte de la familia. Una historia de pasi&oacute;n, 
+        <br>
+        compromiso y autos excepcionales.</p>
+    </div>
+    <nav class="mp"><iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1934.7886041831034!2d-60.705489808678244!3d-31.60709722449882!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x95b507669e001c5b%3A0xd8977aa1aa1d55f3!2sJozami%20Automotores!5e0!3m2!1ses-419!2sar!4v1699124903801!5m2!1ses-419!2sar" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+    </nav>
+    <div class="contacto">
+    <h1><a name="contacto">Contacto</a></h1>
+    <form>
+        <div class="nombre">
+            <label for="nombre" class="nombre-label">Nombre</label>
+            <input type="text" id="nombre" required>
+        </div>
+<br><br>
+    <div class="apellido">
+        <label> Apellido </label>
+        <input type="text"/>
+    </div>
+    <br><br>
+    <div class="mail">
+        <label for="mail" class="mail-label">Mail </label>
+        <input type="text" id="mail" required>
+    </div>
+    <br><br>
+    <div class="direccion">
+        <label> Direccion </label>
+        <input type="text"/>
+    </div>
+    <br><br>
+    <div class="telefono">
+        <label for="telefono" class="telefono-label">Telefono </label>
+        <input type="text" id="telefono" required>
+    </div><br><br>
+    <div class="nacimiento">
+        <label class="nacimiento-label">Nacimiento:</label>
+        <input type="date" id="fechaNacimiento" class="input-nacimiento">
+    </div><br><br>
+    <div class="pais">
+        <label for="pais" class="pais-label">País</label>
+        <select id="pais" class="select-pais" required>
+            <option value="">Selecciona un país</option>
+            <option value="Argentina">Argentina</option>
+            <option value="Colombia">Colombia</option>
+            <option value="Paraguay">Paraguay</option>
+        </select>
+    
+    </div>
+        <br><br>
+        <div class="comentario">
+            <label for="Comentario" class="comentario-label">Comentario</label>
+            <textarea id="Comentario" class="input-comentario" rows="5" cols="40" required></textarea>
+    </div>
+        <br>
+        <button type="button" onclick="validarFormulario()" class="boton-validar">Validar</button>
+      </form>
+    </div>
+</body>
+</html>
